@@ -30,16 +30,5 @@ async def run():
             await producer.send_batch(event_data_batch)
             print("producing")
             sleep(1)
-# producer:
-#         # Create a batch.
-#         event_data_batch = await producer.create_batch()
-
-#         # Add events to the batch.
-#         event_data_batch.add(EventData("{'key': 'event', 'value': 'First event'}"))
-#         event_data_batch.add(EventData("{'key': 'event', 'value': 'Second event'}"))
-#         event_data_batch.add(EventData("{'key': 'event', 'value': 'Third event'}"))
-
-#         # Send the batch of events to the event hub.
-#         await producer.send_batch(event_data_batch)
-
-# asyncio.run(run())
+            
+asyncio.run(run())
